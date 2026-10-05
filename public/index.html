@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fafaf9" />
+    <meta name="description" content="Meet AURA, the AI writing partner that helps your best ideas find their words." />
+    <title>AURA — Find your words</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="AURA home"><span class="wordmark-icon" aria-hidden="true">a</span>AURA</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#features">Why AURA</a>
+        <a href="#compare">Compare</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <a class="header-cta" href="#demo">Try AURA <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero page-shell">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-mark"></span> YOUR THOUGHTS, IN THEIR BEST LIGHT</div>
+          <h1>Words that sound<br />like <em>you.</em></h1>
+          <p class="hero-description">Meet your thoughtful writing partner. Get from “almost there” to “that’s exactly it.”</p>
+          <div class="hero-phrase"><span class="phrase-label">A little help with</span><span id="typewriter" class="typewriter" aria-live="polite">the words that matter</span><span class="type-caret" aria-hidden="true"></span></div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#demo">Write something <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#features">Meet your co-writer <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-proof"><span class="proof-spark" aria-hidden="true">✳</span> Made for the first draft, and every one after.</div>
+        </div>
+
+        <div class="hero-art" aria-label="AURA writing workspace preview">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="floating-note note-left"><span class="note-dot"></span> A little clearer</div>
+          <div class="floating-note note-right"><span class="note-star">✳</span> Your voice, kept</div>
+          <div class="editor-window">
+            <div class="editor-topbar"><div class="window-dots"><i></i><i></i><i></i></div><span>Untitled draft</span><span class="autosave"><i></i> Saved</span></div>
+            <div class="editor-body">
+              <aside class="editor-rail" aria-hidden="true"><span class="rail-icon rail-active">✳</span><span class="rail-icon">⌕</span><span class="rail-icon">▤</span><span class="rail-line"></span><span class="rail-avatar">M</span></aside>
+              <div class="editor-content">
+                <div class="doc-kicker">A NOTE TO YOUR TEAM</div>
+                <h2>Big things<br /><em>begin here.</em></h2>
+                <p class="doc-line long"></p><p class="doc-line medium"></p><p class="doc-line short"></p>
+                <div class="suggestion"><span class="suggestion-spark">✳</span><span>Try making this opening a little warmer.</span><span class="suggestion-arrow">↗</span></div>
+                <div class="editor-footer"><span><kbd>⌘</kbd> <kbd>J</kbd> Ask AURA</span><span>Words with feeling</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="art-caption"><span class="caption-rule"></span> YOUR NEXT GOOD IDEA IS ALREADY IN THERE.</div>
+        </div>
+      </section>
+
+      <section class="marquee-band" aria-label="AURA writing capabilities">
+        <div class="marquee-track"><span>Find your flow</span><i>✳</i><span>Keep your voice</span><i>✳</i><span>Make it matter</span><i>✳</i><span>Find your flow</span><i>✳</i><span>Keep your voice</span><i>✳</i><span>Make it matter</span><i>✳</i></div>
+      </section>
+
+      <section class="demo-section section-shell" id="demo">
+        <div class="section-heading reveal">
+          <div><div class="eyebrow"><span class="eyebrow-mark"></span> START ANYWHERE</div><h2>A thought is <em>enough.</em></h2></div>
+          <p>Give AURA a rough idea. Get back a first draft you can make your own.</p>
+        </div>
+        <div class="demo-workspace reveal">
+          <div class="demo-prompt">
+            <div class="demo-topline"><span><span class="live-dot"></span> LIVE WRITING DESK</span><span>01 <span class="muted">/ 03</span></span></div>
+            <label for="prompt-input">What are you working on?</label>
+            <textarea id="prompt-input" maxlength="3000" placeholder="A launch email that feels human, not hype-y..." aria-describedby="prompt-help prompt-status"></textarea>
+            <div class="prompt-controls"><span id="prompt-help">A sentence, a fragment, a feeling.</span><span id="character-count">0 / 3000</span></div>
+            <div class="demo-submit-row"><button id="write-button" class="button button-primary" type="button"><span class="button-label">Find my words</span><span aria-hidden="true">↗</span></button><span class="privacy-note"><span aria-hidden="true">◈</span> Your words stay yours</span></div>
+            <p id="prompt-status" class="prompt-status" role="status" aria-live="polite"></p>
+          </div>
+          <div class="demo-result" aria-live="polite">
+            <div class="result-topline"><span class="result-label"><span class="result-spark">✳</span> AURA’S FIRST THOUGHT</span><button class="result-copy" type="button" id="copy-button" aria-label="Copy draft" title="Copy draft" disabled><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg></button></div>
+            <div id="draft-output" class="draft-output"><span class="placeholder-caret"></span><span class="draft-placeholder">Your first draft will find its way here.</span></div>
+            <div class="result-footer"><span>Built to be rewritten.</span><span>✳ &nbsp; AURA</span></div>
+          </div>
+        </div>
+        <p class="demo-disclosure">Demo drafts are illustrative previews. Add a MongoDB connection to save prompts.</p>
+      </section>
+
+      <section class="features-section section-shell" id="features">
+        <div class="section-heading feature-heading reveal">
+          <div><div class="eyebrow"><span class="eyebrow-mark"></span> A BETTER WAY TO BEGIN</div><h2>Not louder. <em>More you.</em></h2></div>
+          <p>The best writing doesn’t lose your voice. It helps you hear it.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-item reveal"><div class="feature-number">01 <span class="feature-icon">✳</span></div><h3>Find the first sentence</h3><p>Move past the blank page with a starting point that sounds like something you’d actually say.</p><a class="feature-link" href="#demo" aria-label="Try first sentence support">↗</a></article>
+          <article class="feature-item reveal"><div class="feature-number">02 <span class="feature-icon icon-outline">↗</span></div><h3>Say it with feeling</h3><p>Shift the tone, make it clearer, or make it kinder. Keep the meaning yours.</p><a class="feature-link" href="#demo" aria-label="Try tone adjustments">↗</a></article>
+          <article class="feature-item reveal"><div class="feature-number">03 <span class="feature-icon icon-words">Aa</span></div><h3>Keep your voice</h3><p>Get the help you need without sanding off the quirks that make it yours.</p><a class="feature-link" href="#demo" aria-label="Try voice-preserving edits">↗</a></article>
+        </div>
+      </section>
+
+      <section class="voice-section section-shell reveal">
+        <div class="voice-image-wrap"><img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=85" alt="A writer at a desk, working through a first draft" loading="lazy" /><span class="image-stamp">MAKE ROOM<br />FOR A GOOD<br /><em>FIRST DRAFT.</em></span></div>
+        <div class="voice-copy"><div class="eyebrow"><span class="eyebrow-mark"></span> THE HUMAN PART MATTERS</div><h2>Good writing is a feeling you <em>recognize.</em></h2><p>AURA doesn’t write instead of you. It sits beside you while you find the line that clicks, the tone that fits, the words that feel like home.</p><a class="text-link" href="#demo">Find your first line <span aria-hidden="true">↗</span></a><div class="voice-signature"><span class="signature-mark">a</span><span>A little more you,<br />in every sentence.</span></div></div>
+      </section>
+
+      <section class="comparison-section section-shell" id="compare">
+        <div class="section-heading reveal"><div><div class="eyebrow"><span class="eyebrow-mark"></span> A DIFFERENT KIND OF WRITING TOOL</div><h2>Your voice, not <em>more noise.</em></h2></div><p>Thoughtful help for real-life writing. Without the extra machinery.</p></div>
+        <div class="comparison-wrap reveal">
+          <table class="comparison-table">
+            <thead><tr><th scope="col">WHAT MATTERS</th><th scope="col" class="aura-column"><span class="table-logo"><span>✳</span> AURA</span></th><th scope="col">TYPICAL AI TOOLS</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Sounds like you</th><td class="aura-column"><span class="table-check">✓</span> Voice-first suggestions</td><td>One-size-fits-all output</td></tr>
+              <tr><th scope="row">Easy to get started</th><td class="aura-column"><span class="table-check">✓</span> A thought is enough</td><td>Prompt engineering required</td></tr>
+              <tr><th scope="row">Made for everyday writing</th><td class="aura-column"><span class="table-check">✓</span> Notes, emails, anything</td><td>Built for general tasks</td></tr>
+              <tr><th scope="row">Feels like a partner</th><td class="aura-column"><span class="table-check">✓</span> Gentle, useful guidance</td><td>Chat window, blank page</td></tr>
+            </tbody>
+          </table>
+          <p class="comparison-note">AURA is a writing companion, not a replacement for your own judgment.</p>
+        </div>
+      </section>
+
+      <section class="pricing-section section-shell" id="pricing">
+        <div class="pricing-intro reveal"><div class="eyebrow"><span class="eyebrow-mark"></span> ROOM TO WRITE</div><h2>Start with a thought.<br /><em>Stay for the flow.</em></h2><p>Come as you are. There’s a little AURA for every kind of writing day.</p><div class="billing-control" role="group" aria-label="Billing frequency"><button class="billing-option is-selected" type="button" data-billing="monthly" aria-pressed="true">Monthly</button><button class="billing-option" type="button" data-billing="yearly" aria-pressed="false">Yearly <span class="save-tag">SAVE 25%</span></button></div></div>
+        <div class="pricing-grid reveal">
+          <article class="price-plan"><div class="plan-top"><span class="plan-name">AURA free</span><span class="plan-symbol">✳</span></div><p class="plan-description">For the everyday moments you need a hand.</p><div class="plan-price"><span class="price-amount" data-monthly="$0" data-yearly="$0">$0</span><span class="price-period">/ forever</span></div><a class="button button-light" href="#demo">Start writing <span aria-hidden="true">↗</span></a><ul><li>10 writing assists a day</li><li>All the tones, all the time</li><li>Your voice stays yours</li></ul></article>
+          <article class="price-plan plan-featured"><div class="plan-top"><span class="plan-name">AURA plus</span><span class="plan-badge">A LITTLE MORE ROOM</span></div><p class="plan-description">For the days you can’t stop at one good idea.</p><div class="plan-price"><span class="price-amount" data-monthly="$12" data-yearly="$9">$12</span><span class="price-period">/ month</span></div><a class="button button-primary" href="#demo">Find your flow <span aria-hidden="true">↗</span></a><ul><li>Unlimited writing assists</li><li>Save your favorite prompts</li><li>Make every draft sound like you</li></ul></article>
+        </div>
+      </section>
+
+      <section class="faq-section section-shell" id="faq">
+        <div class="faq-title reveal"><div class="eyebrow"><span class="eyebrow-mark"></span> A FEW GOOD QUESTIONS</div><h2>Good to <em>know.</em></h2><p>Still curious? We like that about you.</p></div>
+        <div class="faq-list reveal">
+          <details class="faq-item"><summary>Is AURA going to write everything for me?<span class="faq-plus" aria-hidden="true"></span></summary><p>Nope. Think of AURA as a thoughtful writing partner. It helps you find a starting point, tune a sentence, or try a new tone. The final words are always yours.</p></details>
+          <details class="faq-item"><summary>What can I write with AURA?<span class="faq-plus" aria-hidden="true"></span></summary><p>Emails, notes, posts, speeches, tricky messages, and all the little bits of writing that make up a day. If it needs words, AURA can help you get there.</p></details>
+          <details class="faq-item"><summary>Can I change my plan later?<span class="faq-plus" aria-hidden="true"></span></summary><p>Absolutely. Start on the free plan and move to AURA plus whenever you need more room. You can change or cancel your plan at any time.</p></details>
+          <details class="faq-item"><summary>Do my words still sound like me?<span class="faq-plus" aria-hidden="true"></span></summary><p>That’s the whole idea. AURA offers a first draft, not a final say. Take what works, change what doesn’t, and keep the words that feel like you.</p></details>
+        </div>
+      </section>
+
+      <section class="closing-section"><div class="closing-inner reveal"><div class="closing-stamp">✳</div><div class="eyebrow">THERE YOU ARE.</div><h2>Go on. <em>Say it.</em></h2><p>Your next thought is a good place to begin.</p><a class="button button-light" href="#demo">Write something <span aria-hidden="true">↗</span></a></div><div class="closing-loop" aria-hidden="true">AURA · AURA · AURA ·</div></section>
+    </main>
+
+    <footer class="site-footer"><a class="wordmark" href="#top"><span class="wordmark-icon" aria-hidden="true">a</span>AURA</a><span>Made for the words that matter.</span><a href="#top">Back to the beginning ↑</a><span class="footer-copyright">© 2026 AURA</span></footer>
+  </body>
+</html>

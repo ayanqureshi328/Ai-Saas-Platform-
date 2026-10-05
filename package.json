@@ -1,0 +1,12 @@
+{
+  "name": "aura-ai-writing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AURA AI writing tool landing page and prompt-saving demo",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.12.0"
+  }
+}
